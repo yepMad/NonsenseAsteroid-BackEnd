@@ -1,9 +1,5 @@
 # [Back-End] Nonsense Asteroid
 
-**Contents**
-
-[TOC]
-
 ## How run?
 #### Database Server
 Do you need a MongoDB server; or Docker.
