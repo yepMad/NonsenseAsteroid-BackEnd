@@ -1,5 +1,15 @@
 # [Back-End] Nonsense Asteroid
 
+**Contents**
+- [How run?](https://github.com/yepMad/NonsenseAsteroidBackEnd#how-run)
+   - [Database Server](https://github.com/yepMad/NonsenseAsteroidBackEnd#database-server)
+ 
+   - [Node, Yarn and NPM Version](https://github.com/yepMad/NonsenseAsteroidBackEnd#node-yarn-and-npm-version)
+   - [Running the server](https://github.com/yepMad/NonsenseAsteroidBackEnd#running-the-server)
+
+- [Routes](https://github.com/yepMad/NonsenseAsteroidBackEnd#routes)
+   - [Scoreboard](https://github.com/yepMad/NonsenseAsteroidBackEnd#scoreboard)
+
 ## How run?
 #### Database Server
 Do you need a MongoDB server; or Docker.
