@@ -10,8 +10,9 @@ class Database {
       'mongodb://localhost:27017/nonsenseasteroid',
       {
         useNewUrlParser: true,
-        useFindAndModify: true,
+        useFindAndModify: false,
         useUnifiedTopology: true,
+        useCreateIndex: true,
       }
     );
   }

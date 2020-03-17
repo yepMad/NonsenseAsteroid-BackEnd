@@ -3,36 +3,28 @@ import Scoreboard from '../schemas/Scoreboard';
 class ScoreboardController {
   async index(req, res) {
     const scores = await Scoreboard.find()
-      .sort({ createdAt: 'desc' })
-      .limit(10);
+      .sort({ score: 'desc' })
+      .limit(10)
+      .select('name score');
 
     return res.json(scores);
   }
 
   async update(req, res) {
-    const checkUserExists = await Scoreboard.find(
-      {
-        token: req.body.userToken,
-      },
-      null,
-      { limit: 1 }
-    );
+    const { token, name, score } = req.body;
+
+    const checkUserExists = await Scoreboard.find({ token }, { limit: 1 });
 
     if (checkUserExists.length === 0) {
-      await Scoreboard.create({
-        token: req.body.userToken,
-        name: req.body.name,
-        score: req.body.score,
-      });
+      await Scoreboard.create({ token, name, score });
     } else {
-      await Scoreboard.findOneAndUpdate(req.score, {
-        score: req.body.score,
-      });
+      await Scoreboard.findOneAndUpdate({ token }, { score });
     }
 
     const scores = await Scoreboard.find()
       .sort({ score: 'desc' })
-      .limit(10);
+      .limit(10)
+      .select('name score');
 
     return res.json(scores);
   }
