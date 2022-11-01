@@ -35,6 +35,5 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           script: |
             cd ~/nonsense-asteroid
-            git clean -f -d
             yarn install
             pm2 reload ecosystem.config.js
