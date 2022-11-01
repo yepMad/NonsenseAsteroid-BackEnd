@@ -23,7 +23,7 @@ jobs:
           username: ${{ secrets.SSH_USER }}
           port: ${{ secrets.SSH_PORT }}
           key: ${{ secrets.SSH_KEY }}
-          source: ".git,dist,.sequelizerc,LICENSE,README.md,nodemon.json,package.json,yarn.lock"
+          source: ".git,dist,.sequelizerc,ecosystem.config.js,LICENSE,README.md,nodemon.json,package.json,yarn.lock"
           target: "~/nonsense-asteroid"
 
       - name: Run production pipeline
